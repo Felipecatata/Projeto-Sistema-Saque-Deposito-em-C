@@ -6,6 +6,8 @@
 float saldo = 1000;
 
 void depositar(float valor){
+	printf("Digite o valor do deposito: ");
+	scanf("%f", &valor);
 	saldo = saldo + valor;
 }
 
@@ -14,7 +16,9 @@ void sacar(float valor){
 		printf("Nao foi possivel sacar, saldo insuficiente\n");
 	}
 	else{
-		saldo = saldo + valor;
+	printf("Digite o valor do saque: ");
+	scanf("%f", &valor);
+		saldo = saldo - valor;
 	}
 }
 
@@ -24,9 +28,6 @@ int main(int argc, char *argv[]) {
 	
 	printf("Voce deseja depositar ou sacar dinheiro? (Digite 1 para deposito ou 2 para saque): ");
 	scanf("%d", &opcao);
-	
-	printf("Digite o valor: ");
-	scanf("%f", &valor);
 	
 	if(opcao == 1){
 		depositar(valor);
