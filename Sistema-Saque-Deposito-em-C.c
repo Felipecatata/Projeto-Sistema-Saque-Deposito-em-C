@@ -12,12 +12,12 @@ void depositar(float valor){
 }
 
 void sacar(float valor){
+	printf("Digite o valor do saque: ");
+	scanf("%f", &valor);
 	if(saldo < valor){
 		printf("Nao foi possivel sacar, saldo insuficiente\n");
 	}
 	else{
-	printf("Digite o valor do saque: ");
-	scanf("%f", &valor);
 		saldo = saldo - valor;
 	}
 }
